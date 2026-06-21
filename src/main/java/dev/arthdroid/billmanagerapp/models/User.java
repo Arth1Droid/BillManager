@@ -1,5 +1,6 @@
 package dev.arthdroid.billmanagerapp.models;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -34,7 +35,7 @@ public class User extends AuditableEntity implements UserDetails  {
 	@Column(name = "email", nullable = false, unique = true)
 	private String email;
 	@OneToMany(mappedBy = "user")
-    private List<Bill> bills;
+    private List<Bill> bills = new ArrayList<>();
 	
 	public User() {
 		
