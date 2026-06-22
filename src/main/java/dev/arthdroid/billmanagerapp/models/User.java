@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import org.jspecify.annotations.Nullable;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -71,6 +72,9 @@ public class User extends AuditableEntity implements UserDetails  {
 	}
 	public void setBills(List<Bill> bills) {
 		this.bills = bills;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	@Override
